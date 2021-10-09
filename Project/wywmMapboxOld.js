@@ -1,30 +1,28 @@
-//
-//
 // Add your Mapbox access token
-
-mapboxgl.accessToken = 'pk.eyJ1IjoiamFtZXNyeWFuMTEzOCIsImEiOiJjanp4bWVlMTYwYzBiM25veXg0Mzd6Mm91In0.mB2WrKrXRb38UKRl-mE47g';
-const vancouver = [	-123.11, 49.24];
-const calgary = [	-114.06, 51.04];
-const toronto = [	-79.34, 43.65];
-const ottawa = [	-75.69, 45.42];
-const montreal = [	-73.56, 45.50];
-const end = [74.5, 40];
-const map = new mapboxgl.Map({
-        container: 'map', // Container ID from HTML
+      mapboxgl.accessToken = 'pk.eyJ1IjoiamFtZXNyeWFuMTEzOCIsImEiOiJjanp4bWVlMTYwYzBiM25veXg0Mzd6Mm91In0.mB2WrKrXRb38UKRl-mE47g';
+      const vancouver = [	-123.11, 49.24];
+      const calgary = [	-114.06, 51.04];
+      const toronto = [	-79.34, 43.65];
+      const ottawa = [	-75.69, 45.42];
+      const montreal = [	-73.56, 45.50];
+      const end = [74.5, 40];
+      const map = new mapboxgl.Map({
+        container: 'map', // Specify the container ID
+        // style: 'mapbox://styles/jamesryan1138/ckuhfh0qg9csm17l7y6l5h6yy', // Specify which map style to use
         style: 'mapbox://styles/mapbox/satellite-streets-v11', // Specify which map style to use
-        center: [-115.392,51.059], // Starting position IVO Canmore
-        pitch: 60, // Camera pitch
-        bearing: -60, //
+        center: [-115.392,51.059], // Specify the starting position
+        pitch: 60,
+        bearing: -60,
         zoom: 14 // Specify the starting zoom
       });
 
 // Add the control to the map.
-map.addControl(
-new MapboxGeocoder({
-accessToken: mapboxgl.accessToken,
-mapboxgl: mapboxgl
-})
-);
+      map.addControl(
+      new MapboxGeocoder({
+      accessToken: mapboxgl.accessToken,
+      mapboxgl: mapboxgl
+      })
+      );
 
 // Set the City to Vancouver
 document.getElementById('vancouver').addEventListener('click', () => {
@@ -96,7 +94,6 @@ essential: true
 });
 });
 
-/*
 // Target the params form in the HTML
 const params = document.getElementById('params');
 
@@ -151,7 +148,7 @@ minutes = target.value;
 
 getIso();
 });
-*/
+
 map.on('load', () => {
 // When the map loads, add the source and layer
 map.addSource('iso', {
@@ -163,7 +160,7 @@ data: {
 });
 
 
-/*
+
 map.addLayer(
 {
 'id': 'isoLayer',
@@ -178,10 +175,9 @@ map.addLayer(
 'poi-label'
 );
 
-
 // Initialize the marker at the query coordinates
 marker.setLngLat(lngLat).addTo(map);
-*/
+
 // Make the API call
 getIso();
 });

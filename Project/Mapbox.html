@@ -13,73 +13,67 @@
   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.js'></script>
   <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.css' rel='stylesheet' />
 
+  <!-- Load the `mapbox-gl-geocoder` plugin. -->
+  <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.min.js"></script>
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.css" type="text/css">
+
 </head>
 
 <body>
-<div class="container-fluid">
+  <div class="container-fluid">
 
-  <div class="row-cols-2">
-  <div class="col-6">
-    <div class="row mb-3">
-      <div class="col-md-4 themed-grid-col"><small>WithYouWithMe</small></div>
-      <div class="col-md-4 themed-grid-col"><small>WebDev</small></div>
-      <div class="col-md-4 themed-grid-col"><small><a href="mailto:james.ryan@live.ca">Contact</a></small></div>
-    </div>
-    <div class="row mb-3">
-      <div class="col-md-12 themed-grid-col"><h2>Project - Map E</h2></div>
-    </div>
-    <div class="row mb-3">
-      <div class="col-md-9 themed-grid-col"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p></div>
-      <div class="col-md-3 themed-grid-col"></div>
-    </div>
-
-    <div class="row mb-3">
-      <div class="col-md-4 themed-grid-col"><form id='params'>
-        <h4 class='txt-m txt-bold mb6'>Choose travel method:</4>
-        <div class='mb12 mr12 toggle-group align-center'>
-          <label class='toggle-container'>
-            <input name='profile' type='radio' value='walking'>
-            <div class='toggle toggle--active-null toggle--null'><small>Walking</small></div>
-          </label>
-          <label class='toggle-container'>
-            <input name='profile' type='radio' value='cycling' checked>
-            <div class='toggle toggle--active-null toggle--null'><small>Cycling</small></div>
-          </label>
-          <label class='toggle-container'>
-            <input name='profile' type='radio' value='driving'>
-            <div class='toggle toggle--active-null toggle--null'><small>Driving</small></div>
-          </label>
+    <div class="row-cols-2">
+      <div class="col-6">
+        <div class="row mb-3">
+          <div class="col-md-4 themed-grid-col"><small>WithYouWithMe</small></div>
+          <div class="col-md-4 themed-grid-col"><small>WebDev</small></div>
+          <div class="col-md-4 themed-grid-col"><small><a href="mailto:james.ryan@live.ca">Contact</a></small></div>
         </div>
-        </form>
-      </div>
-      <div class="col-md-4 themed-grid-col">
-        <h4 class='txt-m txt-bold mb6'>Choose a City:</4>
-          <button id="sydney">Sydney</button><br>
-          <button id="vancouver">Vancouver</button>
+        <div class="row mb-3">
+          <div class="col-md-12 themed-grid-col"><h2>Canada Explorations</h2></div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-9 themed-grid-col"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p></div>
+          <div class="col-md-3 themed-grid-col"></div>
+        </div>
 
-      </div>
-      <div class="col-md-4 themed-grid-col">
-        <h4 class='txt-m txt-bold mb6'>Choose a Style:</4>
-          <div id="menu">
-            <input id="satellite-v9" type="radio" name="rtoggle" value="satellite" checked="checked">
-            <!-- See a list of Mapbox-hosted public styles at -->
-            <!-- https://docs.mapbox.com/api/maps/styles/#mapbox-styles -->
-            <label for="satellite-v9">satellite</label><br>
-            <input id="light-v10" type="radio" name="rtoggle" value="light">
-            <label for="light-v10">light</label><br>
-            <input id="dark-v10" type="radio" name="rtoggle" value="dark">
-            <label for="dark-v10">dark</label><br>
+        <div class="row mb-3">
+          <div class="col-md-4 themed-grid-col">
+            <img src="RedMapleLeaf.png" width="40">
           </div>
+          <div class="col-md-4 themed-grid-col">
+            <h5>Choose a City:</5><br>
+              <button id="vancouver">Vancouver</button><br>
+              <button id="calgary">Calgary</button><br>
+              <button id="toronto">Toronto</button><br>
+              <button id="ottawa">Ottawa</button><br>
+              <button id="montreal">Montreal</button><br>
+            </div>
+            <div class="col-md-4 themed-grid-col">
+              <h4 class='txt-m txt-bold mb6'>Choose a Style:</4>
+                <div id="menu">
+                  <input id="satellite-streets-v11" type="radio" name="rtoggle" value="satellite" checked="checked">
+                  <label for="satellite-streets-v11">satellite</label><br>
+                  <input id="light-v10" type="radio" name="rtoggle" value="light">
+                  <label for="light-v10">light</label><br>
+                  <input id="dark-v10" type="radio" name="rtoggle" value="dark">
+                  <label for="dark-v10">dark</label><br>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Container for the map -->
+          <div class="col-6" id='map'>
+          </div>
+          <script src='wywmMapbox.js'></script>
+        </div>
+
+        <div class="row-cols-1">
+          <div class="col-12"><h1>#WYWM</h1>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
+    </body>
 
-  <!-- Container for the map -->
-  <div class="col-6" id='map'>
-  </div>
-<script src='wywmMapbox.js'></script>
-    </div>
-</div>
-</body>
-
-</html>
+    </html>
