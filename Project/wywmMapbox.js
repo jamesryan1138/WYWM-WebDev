@@ -1,14 +1,13 @@
-//
-//
 // Add your Mapbox access token
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiamFtZXNyeWFuMTEzOCIsImEiOiJjanp4bWVlMTYwYzBiM25veXg0Mzd6Mm91In0.mB2WrKrXRb38UKRl-mE47g';
-const vancouver = [	-123.11, 49.24];
-const calgary = [	-114.06, 51.04];
-const toronto = [	-79.34, 43.65];
-const ottawa = [	-75.69, 45.42];
-const montreal = [	-73.56, 45.50];
-const end = [74.5, 40];
+
+const vancouver = [-123.11, 49.24];
+const calgary = [-114.06, 51.04];
+const toronto = [-79.34, 43.65];
+const ottawa = [-75.69, 45.42];
+const montreal = [-73.56, 45.50];
+
 const map = new mapboxgl.Map({
         container: 'map', // Container ID from HTML
         style: 'mapbox://styles/mapbox/satellite-streets-v11', // Specify which map style to use
@@ -96,92 +95,15 @@ essential: true
 });
 });
 
-/*
-// Target the params form in the HTML
-const params = document.getElementById('params');
-
-// Target the params form in the HTML for Map style change
-const layerList = document.getElementById('menu');
-const inputs = layerList.getElementsByTagName('input');
-
-for (const input of inputs) {
-input.onclick = (layer) => {
-const layerId = layer.target.id;
-map.setStyle('mapbox://styles/mapbox/' + layerId);
-};
-}
-
-// Create variables to use in getIso()
-const urlBase = 'https://api.mapbox.com/isochrone/v1/mapbox/';
-const lon = -77.034;
-const lat = 38.899;
-let profile = 'cycling';
-let minutes = 10;
-
-// Set up a marker that you can use to show the query's coordinates
-const marker = new mapboxgl.Marker({
-'color': '#FFF01F'
+// Change map style to Satellite
+document.getElementById('satellite').addEventListener('click', () => {
+map.setStyle('mapbox://styles/mapbox/satellite-streets-v11');
 });
-
-// Create a LngLat object to use in the marker initialization
-// https://docs.mapbox.com/mapbox-gl-js/api/#lnglat
-const lngLat = {
-lon: lon,
-lat: lat
-};
-
-// Create a function that sets up the Isochrone API query then makes a fetch call
-async function getIso() {
-const query = await fetch(
-`${urlBase}${profile}/${lon},${lat}?contours_minutes=${minutes}&polygons=true&access_token=${mapboxgl.accessToken}`,
-{ method: 'GET' }
-);
-const data = await query.json();
-// Set the 'iso' source's data to what's returned by the API query
-map.getSource('iso').setData(data);
-}
-
-// When a user changes the value of profile or duration by clicking a button, change the parameter's value and make the API query again
-params.addEventListener('change', ({ target }) => {
-if (target.name === 'profile') {
-profile = target.value;
-} else if (target.name === 'duration') {
-minutes = target.value;
-}
-
-getIso();
+// Change map style to Light
+document.getElementById('lightStyle').addEventListener('click', () => {
+map.setStyle('mapbox://styles/mapbox/light-v10');
 });
-*/
-map.on('load', () => {
-// When the map loads, add the source and layer
-map.addSource('iso', {
-type: 'geojson',
-data: {
-'type': 'FeatureCollection',
-'features': []
-}
-});
-
-
-/*
-map.addLayer(
-{
-'id': 'isoLayer',
-'type': 'fill',
-'source': 'iso',
-'layout': {},
-'paint': {
-'fill-color': '#39FF14',
-'fill-opacity': 0.5
-}
-},
-'poi-label'
-);
-
-
-// Initialize the marker at the query coordinates
-marker.setLngLat(lngLat).addTo(map);
-*/
-// Make the API call
-getIso();
+// Change map style to Dark
+document.getElementById('darkStyle').addEventListener('click', () => {
+map.setStyle('mapbox://styles/mapbox/dark-v10');
 });

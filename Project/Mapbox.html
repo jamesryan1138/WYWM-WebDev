@@ -3,12 +3,11 @@
 
 <head>
   <meta charset='utf-8' />
-  <title>WYWM - mapbox Isochrone API</title>
+  <title>WYWM - Explore Canada</title>
   <meta name='viewport' content='width=device-width, initial-scale=1' />
 
   <!-- Import Custom Stylesheet  -->
   <link href='style.css' rel='stylesheet'>
-
   <!-- Import Mapbox GL JS  -->
   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.js'></script>
   <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.css' rel='stylesheet' />
@@ -24,42 +23,42 @@
 
     <div class="row-cols-2">
       <div class="col-6">
-        <div class="row mb-3">
-          <div class="col-md-4 themed-grid-col"><small>WithYouWithMe</small></div>
-          <div class="col-md-4 themed-grid-col"><small>WebDev</small></div>
-          <div class="col-md-4 themed-grid-col"><small><a href="mailto:james.ryan@live.ca">Contact</a></small></div>
+        <div class="row">
+          <div class="col-4"><small>WithYouWithMe</small></div>
+          <div class="col-4"><small>WebDev</small></div>
+          <div class="col-4"><small><a href="mailto:james.ryan@live.ca">Say hello!</a></small></div>
         </div>
-        <div class="row mb-3">
-          <div class="col-md-12 themed-grid-col"><h2>Canada Explorations</h2></div>
+        <div class="row">
+          <div class="col-12"><img src="RedMapleLeaf.png" width="40"></div>
         </div>
-        <div class="row mb-3">
-          <div class="col-md-9 themed-grid-col"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p></div>
-          <div class="col-md-3 themed-grid-col"></div>
+        <div class="row">
+          <div class="col-12">
+            <h6>MapBox API</h6><br>
+            <p class="display-4">Explore Canada</p><br>
+            <hr style="width:10%">
+        </div>
+        </div>
+        <div class="row">
+          <div class="col-9"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p></div>
+          <div class="col-3"></div>
         </div>
 
-        <div class="row mb-3">
-          <div class="col-md-4 themed-grid-col">
-            <img src="RedMapleLeaf.png" width="40">
-          </div>
-          <div class="col-md-4 themed-grid-col">
+        <div class="row">
+          <div class="col-4">
             <h5>Choose a City:</5><br>
-              <button id="vancouver">Vancouver</button><br>
-              <button id="calgary">Calgary</button><br>
-              <button id="toronto">Toronto</button><br>
-              <button id="ottawa">Ottawa</button><br>
-              <button id="montreal">Montreal</button><br>
+              <button id="vancouver" class="btn">Vancouver</button><br>
+              <button id="calgary" class="btn">Calgary</button><br>
+              <button id="toronto" class="btn">Toronto</button><br>
+              <button id="ottawa" class="btn">Ottawa</button><br>
+              <button id="montreal" class="btn">Montreal</button><br><br>
             </div>
-            <div class="col-md-4 themed-grid-col">
-              <h4 class='txt-m txt-bold mb6'>Choose a Style:</4>
-                <div id="menu">
-                  <input id="satellite-streets-v11" type="radio" name="rtoggle" value="satellite" checked="checked">
-                  <label for="satellite-streets-v11">satellite</label><br>
-                  <input id="light-v10" type="radio" name="rtoggle" value="light">
-                  <label for="light-v10">light</label><br>
-                  <input id="dark-v10" type="radio" name="rtoggle" value="dark">
-                  <label for="dark-v10">dark</label><br>
-                </div>
-              </div>
+            <h5>Select Map Style:</5><br>
+              <button id="satellite" class="btn">Satellite</button><br>
+              <button id="lightStyle" class="btn">Light Style</button><br>
+              <button id="darkStyle" class="btn">Dark Style</button><br><br>
+            </div>
+            </div>
+            <div class="col-4">
             </div>
           </div>
 
@@ -69,10 +68,6 @@
           <script src='wywmMapbox.js'></script>
         </div>
 
-        <div class="row-cols-1">
-          <div class="col-12"><h1>#WYWM</h1>
-          </div>
-        </div>
       </div>
     </body>
 
