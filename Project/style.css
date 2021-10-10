@@ -56,12 +56,12 @@ p {
     margin-bottom: 1rem;
 }
 a {
-    color: #D20202;
+    color: #FF0000;
     text-decoration: none;
     background-color: transparent;
 }
 a:hover {
-    color: #FF0000;
+    color: #D20202;
     text-decoration: underline;
 }
 h1 {
@@ -305,21 +305,41 @@ h6 {
 /*
 //
 //
+*/
+
+div.fixed {
+  position: fixed;
+  bottom: 25px;
+  left: 20px;
+}
+
+/*
 //
 //
 */
 
 .btn {
   border: 0px;
-  padding: 0px 28px;
-  font-size: 14px;
-  color: #FF0000;
+  background-color: #000;
+  padding: 10px 0px;
+  font-size: 1rem;
+  color: #B5B5B5;
   cursor: pointer;
+  transition-duration: .7s;
 }
 
 .btn:hover {
   background-color: #000;
   border: 0px;
   border-radius: 60px;
-  color: white;
+  color: #FF0000;
+  text-decoration: line-through;
+}
+.btn:active {
+    text-decoration: line-through;
+    color: #D20202;
+}
+.btn:focus {
+    text-decoration: line-through;
+    color: #E5E5E5;
 }

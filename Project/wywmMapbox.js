@@ -1,13 +1,15 @@
-// Add your Mapbox access token
+// Add my Mapbox access token
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiamFtZXNyeWFuMTEzOCIsImEiOiJjanp4bWVlMTYwYzBiM25veXg0Mzd6Mm91In0.mB2WrKrXRb38UKRl-mE47g';
 
+// Set Coordinates for City selection
 const vancouver = [-123.11, 49.24];
 const calgary = [-114.06, 51.04];
 const toronto = [-79.34, 43.65];
 const ottawa = [-75.69, 45.42];
 const montreal = [-73.56, 45.50];
 
+// Initialize the map
 const map = new mapboxgl.Map({
         container: 'map', // Container ID from HTML
         style: 'mapbox://styles/mapbox/satellite-streets-v11', // Specify which map style to use
@@ -17,7 +19,7 @@ const map = new mapboxgl.Map({
         zoom: 14 // Specify the starting zoom
       });
 
-// Add the control to the map.
+// Add the local Search control to the map.
 map.addControl(
 new MapboxGeocoder({
 accessToken: mapboxgl.accessToken,

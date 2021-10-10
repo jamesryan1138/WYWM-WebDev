@@ -6,9 +6,10 @@
   <title>WYWM - Explore Canada</title>
   <meta name='viewport' content='width=device-width, initial-scale=1' />
 
-  <!-- Import Custom Stylesheet  -->
+  <!-- CSS Stylesheet  -->
   <link href='style.css' rel='stylesheet'>
-  <!-- Import Mapbox GL JS  -->
+
+  <!-- Import Mapbox GL JS -->
   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.js'></script>
   <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.css' rel='stylesheet' />
 
@@ -19,30 +20,42 @@
 </head>
 
 <body>
+  <!-- 100% Wide Container -->
   <div class="container-fluid">
 
-    <div class="row-cols-2">
+      <!-- Split page into 2 Columns -->
+      <!-- Start Left column -->
       <div class="col-6">
+        <!-- Row 1 -->
         <div class="row">
-          <div class="col-4"><small>WithYouWithMe</small></div>
-          <div class="col-4"><small>WebDev</small></div>
-          <div class="col-4"><small><a href="mailto:james.ryan@live.ca">Say hello!</a></small></div>
+          <div class="col-4"><small>WithYouWithMe</small>
+          </div>
+          <div class="col-4"><small>WebDev</small>
+          </div>
+          <div class="col-4"><small><a href="mailto:james.ryan@live.ca">Say hello!</a></small>
+          </div>
         </div>
+        <!-- Row 2 -->
         <div class="row">
-          <div class="col-12"><img src="RedMapleLeaf.png" width="40"></div>
+          <div class="col-12"><img src="RedMapleLeaf.png" width="40">
+          </div>
         </div>
+        <!-- Row 3 -->
         <div class="row">
           <div class="col-12">
             <h6>MapBox API</h6><br>
             <p class="display-4">Explore Canada</p><br>
             <hr style="width:10%">
+          </div>
         </div>
-        </div>
+        <!-- Row 4 -->
         <div class="row">
-          <div class="col-9"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p></div>
-          <div class="col-3"></div>
+          <div class="col-9"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          </div>
+          <div class="col-3">
+          </div>
         </div>
-
+        <!-- Row 5 -->
         <div class="row">
           <div class="col-4">
             <h5>Choose a City:</5><br>
@@ -51,23 +64,33 @@
               <button id="toronto" class="btn">Toronto</button><br>
               <button id="ottawa" class="btn">Ottawa</button><br>
               <button id="montreal" class="btn">Montreal</button><br><br>
-            </div>
+          </div>
+          <div class="col-4">
             <h5>Select Map Style:</5><br>
               <button id="satellite" class="btn">Satellite</button><br>
               <button id="lightStyle" class="btn">Light Style</button><br>
               <button id="darkStyle" class="btn">Dark Style</button><br><br>
-            </div>
-            </div>
+          </div>
             <div class="col-4">
             </div>
           </div>
-
-          <!-- Container for the map -->
-          <div class="col-6" id='map'>
+          <!-- Row 6 -->
+          <div class="row fixed">
+            <div class="col-12"><small>WithYouWithMe - 2021</small>
+            </div>
           </div>
-          <script src='wywmMapbox.js'></script>
-        </div>
 
+      <!-- Close /DIV tag for Left Column -->
+      </div>
+
+
+      <!-- Right Column - MapBox Map -->
+      <div class="col-6" id='map'>
+        <!-- Script for the map functions-->
+        <script src='wywmMapbox.js'></script>
+      </div>
+
+      <!-- Close DIV tag for 100% Wide Container -->
       </div>
     </body>
 
