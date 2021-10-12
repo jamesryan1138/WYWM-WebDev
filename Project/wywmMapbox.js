@@ -1,5 +1,4 @@
 // Add my Mapbox access token
-
 mapboxgl.accessToken = 'pk.eyJ1IjoiamFtZXNyeWFuMTEzOCIsImEiOiJjanp4bWVlMTYwYzBiM25veXg0Mzd6Mm91In0.mB2WrKrXRb38UKRl-mE47g';
 
 // Set Coordinates for City selection

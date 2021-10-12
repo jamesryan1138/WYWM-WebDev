@@ -1,6 +1,8 @@
+/*  /////////// Google API Font Import   //////////////  */
 @import
 url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,500;0,800;1,800&display=swap');
 
+/*  /////////// MapBox map CSS to position in right column  //////////////  */
 #map {
   position: absolute;
   top: 0;
@@ -31,14 +33,9 @@ body {
     text-align: left;
     background-color: #000;
 }
-hr {
-    box-sizing: content-box;
-    height: 0;
-    overflow: visible;
-    text-align:left;
-    margin-left: 0;
-    color: #FFF;
-}
+
+/*  /////////// Text related CSS  //////////////  */
+
 h1,
 h2,
 h3,
@@ -83,26 +80,22 @@ h6 {
     font-size: 1rem;
 }
 .display-1 {
-    font-size: 6rem;
-    font-weight: 500;
-    line-height: 1.2;
-}
-.display-2 {
-    font-size: 5.5rem;
-    font-weight: 500;
-    line-height: 1.2;
-}
-.display-3 {
-    font-size: 4.5rem;
-    font-weight: 500;
-    line-height: 1.2;
-}
-.display-4 {
     font-size: 3.5rem;
     font-weight: 500;
     line-height: .5;
     color: #FF0000;
 }
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+    text-align:left;
+    margin-left: 0;
+    color: #FFF;
+}
+
+/*  /////////// Bootstrap Style Column and Rows  //////////////  */
+
 .container,
 {
     width: 100%;
@@ -111,8 +104,6 @@ h6 {
     margin-right: auto;
     margin-left: auto;
 }
-
-/*  /////////// Bootstrap Column and Rows  //////////////  */
 
 .row {
     display: -ms-flexbox;
@@ -136,63 +127,7 @@ h6 {
 .col-7,
 .col-8,
 .col-9,
-.col-auto,
-.col-lg,
-.col-lg-1,
-.col-lg-10,
-.col-lg-11,
-.col-lg-12,
-.col-lg-2,
-.col-lg-3,
-.col-lg-4,
-.col-lg-5,
-.col-lg-6,
-.col-lg-7,
-.col-lg-8,
-.col-lg-9,
-.col-lg-auto,
-.col-md,
-.col-md-1,
-.col-md-10,
-.col-md-11,
-.col-md-12,
-.col-md-2,
-.col-md-3,
-.col-md-4,
-.col-md-5,
-.col-md-6,
-.col-md-7,
-.col-md-8,
-.col-md-9,
-.col-md-auto,
-.col-sm,
-.col-sm-1,
-.col-sm-10,
-.col-sm-11,
-.col-sm-12,
-.col-sm-2,
-.col-sm-3,
-.col-sm-4,
-.col-sm-5,
-.col-sm-6,
-.col-sm-7,
-.col-sm-8,
-.col-sm-9,
-.col-sm-auto,
-.col-xl,
-.col-xl-1,
-.col-xl-10,
-.col-xl-11,
-.col-xl-12,
-.col-xl-2,
-.col-xl-3,
-.col-xl-4,
-.col-xl-5,
-.col-xl-6,
-.col-xl-7,
-.col-xl-8,
-.col-xl-9,
-.col-xl-auto {
+.col-auto {
     position: relative;
     width: 100%;
     padding-right: 15px;
@@ -205,36 +140,7 @@ h6 {
     flex-grow: 1;
     max-width: 100%;
 }
-.row-cols-1 > * {
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
-    max-width: 100%;
-}
-.row-cols-2 > * {
-    -ms-flex: 0 0 50%;
-    flex: 0 0 50%;
-    max-width: 50%;
-}
-.row-cols-3 > * {
-    -ms-flex: 0 0 33.333333%;
-    flex: 0 0 33.333333%;
-    max-width: 33.333333%;
-}
-.row-cols-4 > * {
-    -ms-flex: 0 0 25%;
-    flex: 0 0 25%;
-    max-width: 25%;
-}
-.row-cols-5 > * {
-    -ms-flex: 0 0 20%;
-    flex: 0 0 20%;
-    max-width: 20%;
-}
-.row-cols-6 > * {
-    -ms-flex: 0 0 16.666667%;
-    flex: 0 0 16.666667%;
-    max-width: 16.666667%;
-}
+
 .col-auto {
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
@@ -302,10 +208,7 @@ h6 {
     max-width: 100%;
 }
 
-/*
-//
-//
-*/
+/*  /////////// Fixed Div for footer  //////////////  */
 
 div.fixed {
   position: fixed;
@@ -313,10 +216,7 @@ div.fixed {
   left: 20px;
 }
 
-/*
-//
-//
-*/
+/*  /////////// Button style for map interactions  //////////////  */
 
 .btn {
   border: 0px;
@@ -327,7 +227,6 @@ div.fixed {
   cursor: pointer;
   transition-duration: .7s;
 }
-
 .btn:hover {
   background-color: #000;
   border: 0px;
